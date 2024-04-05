@@ -1,6 +1,6 @@
-## Note this is an extension that uses the product discount function 
+## Note 
+This is an extension that using the cart transform api that rounds all base prices to have no decimal point prices. e.g. $629.44 will transform into $629.00 
 
-This method ensures discount amounts are always in whole numbers, eliminating the possibility of decimals after applying a discount. They will need to consistently generate a discount code using this Discount Function, rather than using our native discount code creator.
 
 
 # Shopify Function development with Rust
