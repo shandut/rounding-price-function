@@ -1,0 +1,14 @@
+query Input {
+  cart {
+    lines {
+      id
+      quantity
+       cost {
+        amountPerQuantity {
+          amount
+          currencyCode
+          }
+      }
+    }
+  }
+}
