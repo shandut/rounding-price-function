@@ -1,3 +1,10 @@
+/*
+This is a Product Discount Function and check if the quantity of line item is 4 or not and applys a 25% discount, this applies across all line items where condition is met. 
+It also has an extra optional condition of checking it a customer tag is applied before adding the discount. This condition is not needed. 
+It will apply ALL discounts(Discount Strategy) that apply not just the FIRST one. 
+Discount Application Strategy Dev Docs(https://shopify.dev/docs/api/functions/reference/product-discounts/graphql/common-objects/discountapplicationstrategy?api%5Bversion%5D=2024-07)
+
+*/
 use shopify_function::prelude::*;
 use shopify_function::Result;
 use serde::{Deserialize, Serialize};
@@ -14,7 +21,7 @@ fn run(input: run::input::ResponseData) -> Result<run::output::FunctionRunResult
         discounts: vec![],
         discount_application_strategy: run::output::DiscountApplicationStrategy::ALL,
     };
-
+///Not needed but added extra condition to test first if the customer has a tag otherwise the disocunt is not applied. 
     let vip = if let Some(identity) = input.cart.buyer_identity {
         if let Some(customer) = identity.customer {
             customer.has_any_tag
