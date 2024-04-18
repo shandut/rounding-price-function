@@ -1,0 +1,23 @@
+query Input {
+  cart {
+    deliveryGroups {
+      id
+      deliveryOptions {
+        handle
+        title
+         cost {
+          amount
+          currencyCode
+          }
+      }
+      selectedDeliveryOption {
+        handle
+        title
+        cost {
+          amount
+          currencyCode
+          }
+      }
+    }
+  }
+}
