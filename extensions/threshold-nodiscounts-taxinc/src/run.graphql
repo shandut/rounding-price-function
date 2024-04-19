@@ -1,0 +1,29 @@
+query Input {
+  
+ cart {
+       cost {
+          subtotalAmount {
+              amount
+              }
+          totalTaxAmount {
+            amount
+            }
+          totalAmount {
+          amount
+          }
+         
+          }
+          deliveryGroups {
+              id
+              deliveryOptions {
+                handle
+                title
+                cost {
+                  amount
+                  currencyCode
+                  }
+              }
+           }
+            
+  }
+}            
