@@ -45,7 +45,7 @@ fn get_discounts(cart_costing: &run::input::InputCartCost, groups: &Vec<run::inp
                     message: Some("You Qualify for Free Shipping!".to_string()),
                     targets: vec![target],
                     value: run::output::Value::Percentage(run::output::Percentage {
-                        value: Decimal::from_str("100.0").unwrap()
+                        value: Decimal::from_str("50.0").unwrap()
                     }),
                 };
                 
