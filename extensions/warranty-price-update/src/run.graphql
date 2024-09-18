@@ -1,13 +1,13 @@
 query Input {
   cart {
     lines {
+      id
       quantity
       cost {
-      amountPerQuantity {
-         amount
-        currencyCode
+        amountPerQuantity {
+          amount
+          currencyCode
         }
-
       }
       sellingPlanAllocation {
         sellingPlan {
@@ -16,14 +16,13 @@ query Input {
       }
       merchandise {
         __typename
-        ...on ProductVariant {
-            id
+        ... on ProductVariant {
+          id
+          title
+          product {
+            title
+          }
         }
-      }
-    }
-    buyerIdentity {
-      customer {
-        hasAnyTag(tags: ["VIP"])
       }
     }
   }

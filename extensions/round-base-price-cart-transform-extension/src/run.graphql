@@ -8,7 +8,9 @@ query Input {
           amount
           currencyCode
           }
+          
       }
+
     }
   }
 }
