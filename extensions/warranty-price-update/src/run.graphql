@@ -3,12 +3,16 @@ query Input {
     lines {
       id
       quantity
+      attribute(key: "Weight") {
+      value
+      }
       cost {
         amountPerQuantity {
           amount
           currencyCode
         }
       }
+      
       sellingPlanAllocation {
         sellingPlan {
           id

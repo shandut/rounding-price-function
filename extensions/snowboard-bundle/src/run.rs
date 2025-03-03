@@ -10,7 +10,7 @@ use std::collections::HashMap;
 const PARENT_PRODUCT_ID: &str = "gid://shopify/ProductVariant/42205904568380";
 const SNOWBOARD_PRODUCT_ID: &str = "gid://shopify/ProductVariant/41272251809852";
 const WAX_PRODUCT_ID: &str = "gid://shopify/ProductVariant/42205916954684";
-const PRICE_ADJUSTMENT_PERCENTAGE: f64 = 50.0;
+const PRICE_ADJUSTMENT_PERCENTAGE: f64 = -50.0;
 
 #[shopify_function_target(query_path = "src/run.graphql", schema_path = "schema.graphql")]
 fn run(input: input::ResponseData) -> Result<output::FunctionRunResult> {
