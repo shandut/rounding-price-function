@@ -1,0 +1,21 @@
+api_version = "2025-01"
+
+[[extensions]]
+name = "t:name"
+handle = "minimumordertotal"
+type = "function"
+
+description = "t:description"
+
+  [[extensions.targeting]]
+  target = "purchase.validation.run"
+  input_query = "src/run.graphql"
+  export = "run"
+
+  [extensions.build]
+command = "cargo wasi build --release"
+  path = "target/wasm32-wasi/release/minimumordertotal.wasm"
+  watch = ["src/**/*.rs"]
+
+[extensions.ui]
+  handle = "validation-ui-extension"

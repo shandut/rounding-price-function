@@ -1,0 +1,30 @@
+query Input {
+  cart {
+    lines {
+      quantity
+      cost {
+      amountPerQuantity {
+         amount
+        currencyCode
+        }
+
+      }
+      sellingPlanAllocation {
+        sellingPlan {
+          id
+        }
+      }
+      merchandise {
+        __typename
+        ...on ProductVariant {
+            id
+        }
+      }
+    }
+    buyerIdentity {
+      customer {
+        hasAnyTag(tags: ["VIP"])
+      }
+    }
+  }
+}

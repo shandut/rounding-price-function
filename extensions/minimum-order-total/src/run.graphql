@@ -1,0 +1,28 @@
+query Input {
+  cart {
+    cost {
+      totalAmount {
+        amount
+      }
+    }
+    deliveryGroups {
+      deliveryAddress {
+        address1
+        address2
+        city
+        company
+        firstName
+        lastName
+        name
+      }
+    }
+  }
+  buyerJourney {
+    step
+  }
+  validation {
+    metafield(namespace: "$app:cart-validation", key: "minimum-order-threshold") {
+      value
+    }
+  }
+}
